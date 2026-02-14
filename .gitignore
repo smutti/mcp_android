@@ -12,6 +12,23 @@ dist/
 
 # Compiled Python bytecode
 *.py[cod]
+__pycache__/
+
+# Python packaging/build artifacts
+*.egg-info/
+.eggs/
+build/
+pip-wheel-metadata/
+
+# Python virtual environments
+.venv/
+venv/
+
+# Python test/cache artifacts
+.pytest_cache/
+.mypy_cache/
+.coverage
+.coverage.*
 
 # Log files
 *.log
@@ -47,4 +64,3 @@ Thumbs.db
 *.flv
 *.mov
 *.wmv
-
