@@ -1,0 +1,1 @@
+"""UI automation integration package."""

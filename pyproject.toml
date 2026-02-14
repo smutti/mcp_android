@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=69.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mcp-android-server"
+version = "0.1.0"
+description = "Multi-device Android MCP server using adbutils and uiautomator2"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "mcp[cli]>=1.22.0,<2.0.0",
+  "adbutils>=2.9.4,<3.0.0",
+  "uiautomator2>=3.2.9,<4.0.0",
+  "pydantic>=2.8.0,<3.0.0",
+  "Pillow>=10.0.0,<13.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.2.0,<9.0.0",
+]
+
+[project.scripts]
+mcp-android-server = "main:run"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+py-modules = ["main", "config", "errors"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["adb*", "app*", "models*", "orchestration*", "shared*", "ui*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

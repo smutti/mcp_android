@@ -1,0 +1,5 @@
+# Codex MCP server config (HTTP API mode).
+# Copy this block into ~/.codex/config.toml under [mcp_servers].
+
+[mcp_servers.android]
+url = "http://127.0.0.1:3001/mcp"
