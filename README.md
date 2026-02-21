@@ -70,6 +70,10 @@ uv run mcp-android-server --mode sse --port 3001
 --port PORT
 --default-serial SERIAL
 --max-workers N
+--session-ttl-s SECONDS
+--healthcheck-interval-s SECONDS
+--connect-retries N
+--connect-backoff-s SECONDS
 ```
 
 Environment variables (equivalent to CLI defaults):
@@ -78,6 +82,10 @@ Environment variables (equivalent to CLI defaults):
 - `MCP_PORT`
 - `MCP_DEFAULT_SERIAL`
 - `MCP_MAX_WORKERS`
+- `MCP_SESSION_TTL_S`
+- `MCP_HEALTHCHECK_INTERVAL_S`
+- `MCP_CONNECT_RETRIES`
+- `MCP_CONNECT_BACKOFF_S`
 
 ## MCP client configuration
 
